@@ -1,0 +1,43 @@
+// 1. Creation
+
+rectangle
+press 10,10
+release 40,40
+circle
+press 100,100
+release 200,200
+draw		// There are 2 shapes
+
+undo
+draw
+undo
+draw		// empty drawing
+
+redo
+draw		// There is 1 shape
+redo
+draw		// There are 2 shapes
+
+// 2. Movement
+
+press 25,25
+move 26,26
+move 27,27
+release 30,30
+draw		// Rectangle moved
+
+undo		// what has been undone?
+draw
+
+
+// 3. redo
+undo
+undo
+draw 	// Clean canvas
+
+rectangle
+press 75,75
+release 95,95
+draw
+
+redo		// ?
