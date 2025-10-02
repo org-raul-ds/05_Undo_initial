@@ -9,7 +9,7 @@ public class SelectionTool implements Tool {
     private EditorWindow editor;
 
     private Figure selectedFigure;
-    private Point currentPoint;
+    private Point lastPoint;
 
     public SelectionTool(EditorWindow editor) {
         this.editor = editor;
@@ -17,7 +17,7 @@ public class SelectionTool implements Tool {
 
     public void mousePressed(int x, int y) {
         selectedFigure = editor.getDrawing().getFigure(x, y);
-        currentPoint = new Point(x, y);
+        lastPoint = new Point(x, y);
     }
 
     public void mouseMoved(int x, int y) {
@@ -30,8 +30,8 @@ public class SelectionTool implements Tool {
 
     private void moveSelectedFigure(int x, int y) {
         if (selectedFigure != null) {
-            selectedFigure.move(x - currentPoint.x, y - currentPoint.y);
-            currentPoint = new Point(x, y);
+            selectedFigure.move(x - lastPoint.x, y - lastPoint.y);
+            lastPoint = new Point(x, y);
         }
     }
 
