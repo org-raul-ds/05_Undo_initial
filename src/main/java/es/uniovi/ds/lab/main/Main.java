@@ -60,7 +60,7 @@ public class Main {
             else if (line[0].startsWith("rel"))
                 editor.mouseReleased(Integer.parseInt(line[1]), Integer.parseInt(line[2]));
 
-            //$ Command History -----------------------------
+            //$ History Commands -----------------------------
 
             else if (line[0].startsWith("und"))
                 editor.undo();
