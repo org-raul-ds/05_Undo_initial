@@ -24,6 +24,7 @@ public class Main {
 
         System.out.println("\nTool Activation: rectangle | circle | triangle | selection");
         System.out.println("Mouse Actions: press x,y | move x,y | release x,y");
+        System.out.println("History Actions: undo | redo");
         System.out.println("Other Commands: draw | exit \n");
 
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -58,6 +59,14 @@ public class Main {
 
             else if (line[0].startsWith("rel"))
                 editor.mouseReleased(Integer.parseInt(line[1]), Integer.parseInt(line[2]));
+
+            //$ Command History -----------------------------
+
+            else if (line[0].startsWith("und"))
+                editor.undo();
+
+            else if (line[0].startsWith("red"))
+                editor.redo();
 
             //$ Other commands -----------------------------
 

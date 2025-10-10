@@ -76,4 +76,13 @@ public class EditorWindow {
         System.out.println();
     }
 
+    //# undo/redo methods -----------------------------
+
+    public void undo() {
+        // ?
+    }
+
+    public void redo() {
+        // ?
+    }
 }
