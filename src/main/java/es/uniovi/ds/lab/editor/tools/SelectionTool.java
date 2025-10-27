@@ -26,6 +26,7 @@ public class SelectionTool implements Tool {
 
     public void mouseReleased(int x, int y) {
         moveSelectedFigure(x, y);
+        selectedFigure = null;
     }
 
     private void moveSelectedFigure(int x, int y) {
