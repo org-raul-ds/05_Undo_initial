@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>es.uniovi.ds</groupId>
-    <artifactId>undo_initial</artifactId>
+    <artifactId>undo_solution</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -14,6 +14,7 @@
 
 
     <build>
+        <finalName>undo</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -30,6 +31,19 @@
                 <version>3.5.1</version>
                 <configuration>
                     <mainClass>es.uniovi.ds.lab.main.Main</mainClass>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>es.uniovi.ds.lab.main.Main</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
 
