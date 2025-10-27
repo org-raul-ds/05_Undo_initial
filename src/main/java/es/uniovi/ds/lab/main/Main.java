@@ -30,7 +30,7 @@ public class Main {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         do {
             System.out.print("> ");
-            String[] line = in.readLine().split("[ ,]");
+            String[] line = in.readLine().split("[,\\s]+");
 
             if (line[0].equals("exit"))
                 return;
