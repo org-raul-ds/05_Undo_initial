@@ -22,10 +22,10 @@ public class Main {
 
     public static void simulateMouse(EditorWindow editor) throws IOException {
 
-        System.out.println("\nTool Activation: rectangle | circle | triangle | selection");
-        System.out.println("Mouse Actions: press x,y | move x,y | release x,y");
-        System.out.println("History Actions: undo | redo");
-        System.out.println("Other Commands: draw | exit \n");
+        System.out.println("\nTool activation: rectangle | circle | triangle | selection");
+        System.out.println("Mouse actions: press x,y | move x,y | release x,y");
+        System.out.println("Other commands: draw | exit");
+        System.out.println("NEW commands ---> undo | redo \n");
 
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         do {
